@@ -1,0 +1,81 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Thu Mar 19 16:05:57 2026
+# Process ID         : 114833
+# Current directory  : /home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/synthesis_logs
+# Command line       : vivado -mode batch -source synth_brv32_mcu.tcl -log vivado_brv32_mcu.log -journal vivado_brv32_mcu.jou
+# Log file           : /home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/synthesis_logs/vivado_brv32_mcu.log
+# Journal file       : /home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/synthesis_logs/vivado_brv32_mcu.jou
+# Running On         : bren-ubuntu24-04
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.4 LTS
+# Processor Detail   : Intel(R) Core(TM) i7-3770 CPU @ 3.40GHz
+# CPU Frequency      : 3691.369 MHz
+# CPU Physical cores : 4
+# CPU Logical cores  : 8
+# Host memory        : 16630 MB
+# Swap memory        : 4294 MB
+# Total Virtual      : 20925 MB
+# Available Virtual  : 11881 MB
+#-----------------------------------------------------------
+source synth_brv32_mcu.tcl
+# create_project -in_memory -part xc7a35tcpg236-1
+# read_verilog [list \
+#     /home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/brv32_mcu.v \
+#     /home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/brv32_core.v \
+#     /home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/alu.v \
+#     /home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/regfile.v \
+#     /home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/decoder.v \
+#     /home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/imem.v \
+#     /home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/dmem.v \
+#     /home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/csr.v \
+#     /home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/gpio.v \
+#     /home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/uart.v \
+#     /home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/timer.v \
+# ]
+# synth_design -top brv32_mcu -part xc7a35tcpg236-1
+Command: synth_design -top brv32_mcu -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 115246
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 2054.867 ; gain = 393.633 ; free physical = 933 ; free virtual = 9729
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'brv32_mcu' [/home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/brv32_mcu.v:8]
+INFO: [Synth 8-6157] synthesizing module 'brv32_core' [/home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/brv32_core.v:6]
+INFO: [Synth 8-6157] synthesizing module 'decoder' [/home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/decoder.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'decoder' (0#1) [/home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/decoder.v:6]
+INFO: [Synth 8-6157] synthesizing module 'regfile' [/home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/regfile.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'regfile' (0#1) [/home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/regfile.v:9]
+INFO: [Synth 8-6157] synthesizing module 'alu' [/home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/alu.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'alu' (0#1) [/home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/alu.v:6]
+INFO: [Synth 8-6157] synthesizing module 'csr' [/home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/csr.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'csr' (0#1) [/home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/csr.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'brv32_core' (0#1) [/home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/brv32_core.v:6]
+INFO: [Synth 8-6157] synthesizing module 'imem' [/home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/imem.v:4]
+	Parameter DEPTH bound to: 256 - type: integer 
+	Parameter INIT_FILE bound to: firmware.hex - type: string 
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'firmware.hex'; please make sure the file is added to project and has read permission, ignoring [/home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/imem.v:18]
+INFO: [Synth 8-6155] done synthesizing module 'imem' (0#1) [/home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/imem.v:4]
+INFO: [Synth 8-6157] synthesizing module 'dmem' [/home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/dmem.v:8]
+	Parameter DEPTH bound to: 1024 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'dmem' (0#1) [/home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/dmem.v:8]
+INFO: [Synth 8-6157] synthesizing module 'gpio' [/home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/gpio.v:5]
+WARNING: [Synth 8-693] zero replication count - replication ignored [/home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/gpio.v:62]
+WARNING: [Synth 8-693] zero replication count - replication ignored [/home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/gpio.v:63]
+WARNING: [Synth 8-693] zero replication count - replication ignored [/home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/gpio.v:64]
+WARNING: [Synth 8-693] zero replication count - replication ignored [/home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/gpio.v:65]
+WARNING: [Synth 8-693] zero replication count - replication ignored [/home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/gpio.v:66]
+INFO: [Synth 8-6155] done synthesizing module 'gpio' (0#1) [/home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/gpio.v:5]
+INFO: [Synth 8-6157] synthesizing module 'uart' [/home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/uart.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'uart' (0#1) [/home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/uart.v:5]
+INFO: [Synth 8-6157] synthesizing module 'timer' [/home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/timer.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'timer' (0#1) [/home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/timer.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'brv32_mcu' (0#1) [/home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/brv32_mcu.v:8]
+WARNING: [Synth 8-6014] Unused sequential element nv_reg was removed.  [/home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/csr.v:78]

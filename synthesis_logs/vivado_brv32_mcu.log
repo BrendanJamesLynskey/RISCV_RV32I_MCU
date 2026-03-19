@@ -1,0 +1,551 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Thu Mar 19 16:28:03 2026
+# Process ID         : 7716
+# Current directory  : /home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/synthesis_logs
+# Command line       : vivado -mode batch -source synth_brv32_mcu.tcl -log vivado_brv32_mcu.log -journal vivado_brv32_mcu.jou
+# Log file           : /home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/synthesis_logs/vivado_brv32_mcu.log
+# Journal file       : /home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/synthesis_logs/vivado_brv32_mcu.jou
+# Running On         : bren-ubuntu24-04
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.4 LTS
+# Processor Detail   : Intel(R) Core(TM) i7-3770 CPU @ 3.40GHz
+# CPU Frequency      : 3348.850 MHz
+# CPU Physical cores : 4
+# CPU Logical cores  : 8
+# Host memory        : 16630 MB
+# Swap memory        : 4294 MB
+# Total Virtual      : 20925 MB
+# Available Virtual  : 15053 MB
+#-----------------------------------------------------------
+source synth_brv32_mcu.tcl
+# set_param general.maxThreads 4
+# create_project -in_memory -part xc7a35tcpg236-1
+# set_property include_dirs {/home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl} [current_fileset]
+# read_verilog [list \
+#     /home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/alu.v \
+#     /home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/brv32_core.v \
+#     /home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/brv32_mcu.v \
+#     /home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/csr.v \
+#     /home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/decoder.v \
+#     /home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/dmem.v \
+#     /home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/gpio.v \
+#     /home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/imem.v \
+#     /home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/regfile.v \
+#     /home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/timer.v \
+#     /home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/uart.v \
+# ]
+# set xdc_file "/home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/synthesis_logs/clock.xdc"
+# set fp [open $xdc_file w]
+# puts $fp "create_clock -period 10.000 -name clk \[get_ports clk\]"
+# close $fp
+# read_xdc $xdc_file
+# synth_design -top brv32_mcu -part xc7a35tcpg236-1
+Command: synth_design -top brv32_mcu -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 7766
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 2216.410 ; gain = 482.875 ; free physical = 3029 ; free virtual = 13149
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'brv32_mcu' [/home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/brv32_mcu.v:8]
+INFO: [Synth 8-6157] synthesizing module 'brv32_core' [/home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/brv32_core.v:6]
+INFO: [Synth 8-6157] synthesizing module 'decoder' [/home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/decoder.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'decoder' (0#1) [/home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/decoder.v:6]
+INFO: [Synth 8-6157] synthesizing module 'regfile' [/home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/regfile.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'regfile' (0#1) [/home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/regfile.v:9]
+INFO: [Synth 8-6157] synthesizing module 'alu' [/home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/alu.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'alu' (0#1) [/home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/alu.v:6]
+INFO: [Synth 8-6157] synthesizing module 'csr' [/home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/csr.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'csr' (0#1) [/home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/csr.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'brv32_core' (0#1) [/home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/brv32_core.v:6]
+INFO: [Synth 8-6157] synthesizing module 'imem' [/home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/imem.v:4]
+	Parameter DEPTH bound to: 256 - type: integer 
+	Parameter INIT_FILE bound to: firmware.hex - type: string 
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'firmware.hex'; please make sure the file is added to project and has read permission, ignoring [/home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/imem.v:18]
+INFO: [Synth 8-6155] done synthesizing module 'imem' (0#1) [/home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/imem.v:4]
+INFO: [Synth 8-6157] synthesizing module 'dmem' [/home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/dmem.v:8]
+	Parameter DEPTH bound to: 1024 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'dmem' (0#1) [/home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/dmem.v:8]
+INFO: [Synth 8-6157] synthesizing module 'gpio' [/home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/gpio.v:5]
+WARNING: [Synth 8-693] zero replication count - replication ignored [/home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/gpio.v:62]
+WARNING: [Synth 8-693] zero replication count - replication ignored [/home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/gpio.v:63]
+WARNING: [Synth 8-693] zero replication count - replication ignored [/home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/gpio.v:64]
+WARNING: [Synth 8-693] zero replication count - replication ignored [/home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/gpio.v:65]
+WARNING: [Synth 8-693] zero replication count - replication ignored [/home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/gpio.v:66]
+INFO: [Synth 8-6155] done synthesizing module 'gpio' (0#1) [/home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/gpio.v:5]
+INFO: [Synth 8-6157] synthesizing module 'uart' [/home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/uart.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'uart' (0#1) [/home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/uart.v:5]
+INFO: [Synth 8-6157] synthesizing module 'timer' [/home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/timer.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'timer' (0#1) [/home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/timer.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'brv32_mcu' (0#1) [/home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/brv32_mcu.v:8]
+WARNING: [Synth 8-6014] Unused sequential element nv_reg was removed.  [/home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/csr.v:78]
+WARNING: [Synth 8-7129] Port addr[7] in module timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[6] in module timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[5] in module timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[1] in module timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[0] in module timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[7] in module uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[6] in module uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[5] in module uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[4] in module uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[1] in module uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[0] in module uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[31] in module uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[30] in module uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[29] in module uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[28] in module uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[27] in module uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[26] in module uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[25] in module uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[24] in module uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[23] in module uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[22] in module uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[21] in module uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[20] in module uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[19] in module uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[18] in module uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[17] in module uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[16] in module uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[7] in module gpio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[6] in module gpio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[5] in module gpio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[1] in module gpio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[0] in module gpio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[31] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[30] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[29] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[28] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[27] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[26] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[25] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[24] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[23] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[22] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[21] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[20] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[19] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[18] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[17] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[16] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[15] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[14] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[13] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[12] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[1] in module imem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[0] in module imem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port csr_op[2] in module csr is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:01:30 ; elapsed = 00:01:35 . Memory (MB): peak = 4551.949 ; gain = 2818.414 ; free physical = 724 ; free virtual = 10854
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:35 ; elapsed = 00:01:41 . Memory (MB): peak = 4551.949 ; gain = 2818.414 ; free physical = 733 ; free virtual = 10863
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:35 ; elapsed = 00:01:41 . Memory (MB): peak = 4551.949 ; gain = 2818.414 ; free physical = 733 ; free virtual = 10863
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 4551.949 ; gain = 0.000 ; free physical = 731 ; free virtual = 10861
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/synthesis_logs/clock.xdc]
+Finished Parsing XDC File [/home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/synthesis_logs/clock.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.05 . Memory (MB): peak = 4792.559 ; gain = 0.000 ; free physical = 1434 ; free virtual = 11575
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.95 . Memory (MB): peak = 4808.688 ; gain = 0.000 ; free physical = 1412 ; free virtual = 11553
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:02:33 ; elapsed = 00:02:34 . Memory (MB): peak = 4816.980 ; gain = 3083.445 ; free physical = 440 ; free virtual = 8987
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:02:33 ; elapsed = 00:02:34 . Memory (MB): peak = 4829.191 ; gain = 3095.656 ; free physical = 440 ; free virtual = 8987
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:02:33 ; elapsed = 00:02:34 . Memory (MB): peak = 4829.191 ; gain = 3095.656 ; free physical = 439 ; free virtual = 8987
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'tx_state_reg' in module 'uart'
+INFO: [Synth 8-802] inferred FSM for state register 'rx_state_reg' in module 'uart'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 TX_IDLE |                               00 |                               00
+                TX_START |                               01 |                               01
+                 TX_DATA |                               10 |                               10
+                 TX_STOP |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'tx_state_reg' using encoding 'sequential' in module 'uart'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 RX_IDLE |                               00 |                               00
+                RX_START |                               01 |                               01
+                 RX_DATA |                               10 |                               10
+                 RX_STOP |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'rx_state_reg' using encoding 'sequential' in module 'uart'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:06:57 ; elapsed = 00:07:01 . Memory (MB): peak = 4829.191 ; gain = 3095.656 ; free physical = 422 ; free virtual = 9005
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 4     
+	   3 Input   32 Bit       Adders := 1     
+	   2 Input   16 Bit       Adders := 2     
+	   2 Input    3 Bit       Adders := 2     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 49    
+	               16 Bit    Registers := 3     
+	                8 Bit    Registers := 4099  
+	                3 Bit    Registers := 2     
+	                1 Bit    Registers := 9     
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 22    
+	   4 Input   32 Bit        Muxes := 8     
+	   5 Input   32 Bit        Muxes := 2     
+	 257 Input   32 Bit        Muxes := 1     
+	   6 Input   32 Bit        Muxes := 1     
+	   4 Input   16 Bit        Muxes := 2     
+	   2 Input    8 Bit        Muxes := 20480 
+	   4 Input    8 Bit        Muxes := 1     
+	   4 Input    4 Bit        Muxes := 1     
+	   8 Input    4 Bit        Muxes := 1     
+	   4 Input    3 Bit        Muxes := 2     
+	   4 Input    2 Bit        Muxes := 2     
+	   2 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 53    
+	   4 Input    1 Bit        Muxes := 16    
+	   5 Input    1 Bit        Muxes := 3     
+	   6 Input    1 Bit        Muxes := 6     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5587] ROM size for "alu_src" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "mem_rd_en" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "mem_wr_en" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "branch" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "jal" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "jalr" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "lui" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "auipc" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5587] ROM size for "alu_src" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "mem_rd_en" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "mem_wr_en" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "branch" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "jal" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "jalr" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "lui" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "auipc" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-7129] Port addr[7] in module timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[6] in module timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[5] in module timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[1] in module timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[0] in module timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[7] in module uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[6] in module uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[5] in module uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[4] in module uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[1] in module uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[0] in module uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[31] in module uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[30] in module uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[29] in module uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[28] in module uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[27] in module uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[26] in module uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[25] in module uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[24] in module uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[23] in module uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[22] in module uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[21] in module uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[20] in module uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[19] in module uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[18] in module uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[17] in module uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[16] in module uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[7] in module gpio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[6] in module gpio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[5] in module gpio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[1] in module gpio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[0] in module gpio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port csr_op[2] in module csr is either unconnected or has no load
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_uart/tx_shift_reg[7] )
+INFO: [Synth 8-3886] merging instance 'u_core/u_csr/mstatus_reg[31]' (FDCE) to 'u_core/u_csr/mtvec_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_core/u_csr/mtval_reg[31]' (FDCE) to 'u_core/u_csr/mtval_reg[0]'
+INFO: [Synth 8-3886] merging instance 'u_core/u_csr/mtvec_reg[31]' (FDCE) to 'u_core/u_csr/mtvec_reg[30]'
+INFO: [Synth 8-3886] merging instance 'u_core/u_csr/mie_reg[31]' (FDCE) to 'u_core/u_csr/mtvec_reg[30]'
+INFO: [Synth 8-3886] merging instance 'u_core/u_csr/mcause_reg[31]' (FDCE) to 'u_core/u_csr/mcause_reg[0]'
+INFO: [Synth 8-3886] merging instance 'u_core/u_csr/mscratch_reg[31]' (FDCE) to 'u_core/u_csr/mtvec_reg[30]'
+INFO: [Synth 8-3886] merging instance 'u_timer/compare_reg[31]' (FDPE) to 'u_uart/clk_div_reg[9]'
+INFO: [Synth 8-3886] merging instance 'u_timer/prescaler_reg[31]' (FDCE) to 'u_timer/auto_reload_reg'
+INFO: [Synth 8-3886] merging instance 'u_core/u_csr/mstatus_reg[0]' (FDCE) to 'u_core/u_csr/mtvec_reg[30]'
+INFO: [Synth 8-3886] merging instance 'u_core/u_csr/mtval_reg[0]' (FDCE) to 'u_core/u_csr/mtval_reg[1]'
+INFO: [Synth 8-3886] merging instance 'u_core/u_csr/mtvec_reg[0]' (FDCE) to 'u_core/u_csr/mtvec_reg[30]'
+INFO: [Synth 8-3886] merging instance 'u_core/u_csr/mie_reg[0]' (FDCE) to 'u_core/u_csr/mtvec_reg[30]'
+INFO: [Synth 8-3886] merging instance 'u_core/u_csr/mcause_reg[0]' (FDCE) to 'u_core/u_csr/mcause_reg[1]'
+INFO: [Synth 8-3886] merging instance 'u_core/u_csr/mscratch_reg[0]' (FDCE) to 'u_core/u_csr/mtvec_reg[30]'
+INFO: [Synth 8-3886] merging instance 'u_uart/clk_div_reg[0]' (FDPE) to 'u_uart/clk_div_reg[9]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_uart/tx_busy_reg )
+INFO: [Synth 8-3886] merging instance 'u_timer/compare_reg[0]' (FDPE) to 'u_uart/clk_div_reg[9]'
+INFO: [Synth 8-3886] merging instance 'u_timer/prescaler_reg[0]' (FDCE) to 'u_timer/auto_reload_reg'
+INFO: [Synth 8-3886] merging instance 'u_timer/enable_reg' (FDCE) to 'u_timer/auto_reload_reg'
+INFO: [Synth 8-3886] merging instance 'u_core/u_csr/mstatus_reg[1]' (FDCE) to 'u_core/u_csr/mtvec_reg[30]'
+INFO: [Synth 8-3886] merging instance 'u_core/u_csr/mtval_reg[1]' (FDCE) to 'u_core/u_csr/mtval_reg[2]'
+INFO: [Synth 8-3886] merging instance 'u_core/u_csr/mtvec_reg[1]' (FDCE) to 'u_core/u_csr/mtvec_reg[30]'
+INFO: [Synth 8-3886] merging instance 'u_core/u_csr/mie_reg[1]' (FDCE) to 'u_core/u_csr/mtvec_reg[30]'
+INFO: [Synth 8-3886] merging instance 'u_core/u_csr/mcause_reg[1]' (FDCE) to 'u_core/u_csr/mcause_reg[3]'
+INFO: [Synth 8-3886] merging instance 'u_core/u_csr/mscratch_reg[1]' (FDCE) to 'u_core/u_csr/mtvec_reg[30]'
+INFO: [Synth 8-3886] merging instance 'u_uart/clk_div_reg[1]' (FDPE) to 'u_uart/clk_div_reg[9]'
+INFO: [Synth 8-3886] merging instance 'u_timer/compare_reg[1]' (FDPE) to 'u_uart/clk_div_reg[9]'
+INFO: [Synth 8-3886] merging instance 'u_timer/prescaler_reg[1]' (FDCE) to 'u_timer/auto_reload_reg'
+INFO: [Synth 8-3886] merging instance 'u_timer/auto_reload_reg' (FDCE) to 'u_gpio/irq_en_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_core/u_csr/mstatus_reg[2]' (FDCE) to 'u_core/u_csr/mtvec_reg[30]'
+INFO: [Synth 8-3886] merging instance 'u_core/u_csr/mtval_reg[2]' (FDCE) to 'u_core/u_csr/mtval_reg[3]'
+INFO: [Synth 8-3886] merging instance 'u_core/u_csr/mtvec_reg[2]' (FDCE) to 'u_core/u_csr/mtvec_reg[30]'
+INFO: [Synth 8-3886] merging instance 'u_core/u_csr/mie_reg[2]' (FDCE) to 'u_core/u_csr/mtvec_reg[30]'
+INFO: [Synth 8-3886] merging instance 'u_core/u_csr/mcause_reg[2]' (FDCE) to 'u_core/u_csr/mtval_reg[3]'
+INFO: [Synth 8-3886] merging instance 'u_core/u_csr/mscratch_reg[2]' (FDCE) to 'u_core/u_csr/mtvec_reg[30]'
+INFO: [Synth 8-3886] merging instance 'u_uart/clk_div_reg[2]' (FDCE) to 'u_gpio/irq_en_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_timer/compare_reg[2]' (FDPE) to 'u_uart/clk_div_reg[9]'
+INFO: [Synth 8-3886] merging instance 'u_timer/prescaler_reg[2]' (FDCE) to 'u_gpio/irq_en_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_core/u_csr/mtval_reg[3]' (FDCE) to 'u_core/u_csr/mtval_reg[4]'
+INFO: [Synth 8-3886] merging instance 'u_core/u_csr/mtvec_reg[3]' (FDCE) to 'u_core/u_csr/mtvec_reg[30]'
+INFO: [Synth 8-3886] merging instance 'u_core/u_csr/mie_reg[3]' (FDCE) to 'u_core/u_csr/mtvec_reg[30]'
+INFO: [Synth 8-3886] merging instance 'u_core/u_csr/mscratch_reg[3]' (FDCE) to 'u_core/u_csr/mtvec_reg[30]'
+INFO: [Synth 8-3886] merging instance 'u_uart/clk_div_reg[3]' (FDCE) to 'u_gpio/irq_en_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_timer/compare_reg[3]' (FDPE) to 'u_uart/clk_div_reg[9]'
+INFO: [Synth 8-3886] merging instance 'u_timer/prescaler_reg[3]' (FDCE) to 'u_gpio/irq_en_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_core/u_csr/mstatus_reg[4]' (FDCE) to 'u_core/u_csr/mtvec_reg[30]'
+INFO: [Synth 8-3886] merging instance 'u_core/u_csr/mtval_reg[4]' (FDCE) to 'u_core/u_csr/mtval_reg[5]'
+INFO: [Synth 8-3886] merging instance 'u_core/u_csr/mtvec_reg[4]' (FDCE) to 'u_core/u_csr/mtvec_reg[30]'
+INFO: [Synth 8-3886] merging instance 'u_core/u_csr/mie_reg[4]' (FDCE) to 'u_core/u_csr/mtvec_reg[30]'
+INFO: [Synth 8-3886] merging instance 'u_core/u_csr/mcause_reg[4]' (FDCE) to 'u_core/u_csr/mtval_reg[5]'
+INFO: [Synth 8-3886] merging instance 'u_core/u_csr/mscratch_reg[4]' (FDCE) to 'u_core/u_csr/mtvec_reg[30]'
+INFO: [Synth 8-3886] merging instance 'u_uart/clk_div_reg[4]' (FDCE) to 'u_gpio/irq_en_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_timer/compare_reg[4]' (FDPE) to 'u_uart/clk_div_reg[9]'
+INFO: [Synth 8-3886] merging instance 'u_timer/prescaler_reg[4]' (FDCE) to 'u_gpio/irq_en_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_core/u_csr/mstatus_reg[5]' (FDCE) to 'u_core/u_csr/mtvec_reg[30]'
+INFO: [Synth 8-3886] merging instance 'u_core/u_csr/mtval_reg[5]' (FDCE) to 'u_core/u_csr/mtval_reg[6]'
+INFO: [Synth 8-3886] merging instance 'u_core/u_csr/mtvec_reg[5]' (FDCE) to 'u_core/u_csr/mtvec_reg[30]'
+INFO: [Synth 8-3886] merging instance 'u_core/u_csr/mie_reg[5]' (FDCE) to 'u_core/u_csr/mtvec_reg[30]'
+INFO: [Synth 8-3886] merging instance 'u_core/u_csr/mcause_reg[5]' (FDCE) to 'u_core/u_csr/mtval_reg[6]'
+INFO: [Synth 8-3886] merging instance 'u_core/u_csr/mscratch_reg[5]' (FDCE) to 'u_core/u_csr/mtvec_reg[30]'
+INFO: [Synth 8-3886] merging instance 'u_uart/clk_div_reg[5]' (FDPE) to 'u_uart/clk_div_reg[9]'
+INFO: [Synth 8-3886] merging instance 'u_timer/compare_reg[5]' (FDPE) to 'u_uart/clk_div_reg[9]'
+INFO: [Synth 8-3886] merging instance 'u_timer/prescaler_reg[5]' (FDCE) to 'u_gpio/irq_en_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_core/u_csr/mstatus_reg[6]' (FDCE) to 'u_core/u_csr/mtvec_reg[30]'
+INFO: [Synth 8-3886] merging instance 'u_core/u_csr/mtval_reg[6]' (FDCE) to 'u_core/u_csr/mtval_reg[7]'
+INFO: [Synth 8-3886] merging instance 'u_core/u_csr/mtvec_reg[6]' (FDCE) to 'u_core/u_csr/mtvec_reg[30]'
+INFO: [Synth 8-3886] merging instance 'u_core/u_csr/mie_reg[6]' (FDCE) to 'u_core/u_csr/mtvec_reg[30]'
+INFO: [Synth 8-3886] merging instance 'u_core/u_csr/mcause_reg[6]' (FDCE) to 'u_core/u_csr/mtval_reg[7]'
+INFO: [Synth 8-3886] merging instance 'u_core/u_csr/mscratch_reg[6]' (FDCE) to 'u_core/u_csr/mtvec_reg[30]'
+INFO: [Synth 8-3886] merging instance 'u_uart/clk_div_reg[6]' (FDPE) to 'u_uart/clk_div_reg[9]'
+INFO: [Synth 8-3886] merging instance 'u_timer/compare_reg[6]' (FDPE) to 'u_uart/clk_div_reg[9]'
+INFO: [Synth 8-3886] merging instance 'u_timer/prescaler_reg[6]' (FDCE) to 'u_gpio/irq_en_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_core/u_csr/mtval_reg[7]' (FDCE) to 'u_core/u_csr/mtval_reg[8]'
+INFO: [Synth 8-3886] merging instance 'u_core/u_csr/mtvec_reg[7]' (FDCE) to 'u_core/u_csr/mtvec_reg[30]'
+INFO: [Synth 8-3886] merging instance 'u_core/u_csr/mcause_reg[7]' (FDCE) to 'u_core/u_csr/mtval_reg[8]'
+INFO: [Synth 8-3886] merging instance 'u_core/u_csr/mscratch_reg[7]' (FDCE) to 'u_core/u_csr/mtvec_reg[30]'
+INFO: [Synth 8-3886] merging instance 'u_uart/clk_div_reg[7]' (FDCE) to 'u_gpio/irq_en_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_timer/compare_reg[7]' (FDPE) to 'u_uart/clk_div_reg[9]'
+INFO: [Synth 8-3886] merging instance 'u_timer/prescaler_reg[7]' (FDCE) to 'u_gpio/irq_en_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_core/u_csr/mstatus_reg[8]' (FDCE) to 'u_core/u_csr/mtvec_reg[30]'
+INFO: [Synth 8-3886] merging instance 'u_core/u_csr/mtval_reg[8]' (FDCE) to 'u_core/u_csr/mtval_reg[9]'
+INFO: [Synth 8-3886] merging instance 'u_core/u_csr/mtvec_reg[8]' (FDCE) to 'u_core/u_csr/mtvec_reg[30]'
+INFO: [Synth 8-3886] merging instance 'u_core/u_csr/mie_reg[8]' (FDCE) to 'u_core/u_csr/mtvec_reg[30]'
+INFO: [Synth 8-3886] merging instance 'u_core/u_csr/mcause_reg[8]' (FDCE) to 'u_core/u_csr/mtval_reg[9]'
+INFO: [Synth 8-3886] merging instance 'u_core/u_csr/mscratch_reg[8]' (FDCE) to 'u_core/u_csr/mtvec_reg[30]'
+INFO: [Synth 8-3886] merging instance 'u_uart/clk_div_reg[8]' (FDPE) to 'u_uart/clk_div_reg[9]'
+INFO: [Synth 8-3886] merging instance 'u_timer/compare_reg[8]' (FDPE) to 'u_uart/clk_div_reg[9]'
+INFO: [Synth 8-3886] merging instance 'u_timer/prescaler_reg[8]' (FDCE) to 'u_gpio/irq_en_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_core/u_csr/mstatus_reg[9]' (FDCE) to 'u_core/u_csr/mtvec_reg[30]'
+INFO: [Synth 8-3886] merging instance 'u_core/u_csr/mtval_reg[9]' (FDCE) to 'u_core/u_csr/mtval_reg[10]'
+INFO: [Synth 8-3886] merging instance 'u_core/u_csr/mtvec_reg[9]' (FDCE) to 'u_core/u_csr/mtvec_reg[30]'
+INFO: [Synth 8-3886] merging instance 'u_core/u_csr/mie_reg[9]' (FDCE) to 'u_core/u_csr/mtvec_reg[30]'
+INFO: [Synth 8-3886] merging instance 'u_core/u_csr/mcause_reg[9]' (FDCE) to 'u_core/u_csr/mtval_reg[10]'
+INFO: [Synth 8-3886] merging instance 'u_core/u_csr/mscratch_reg[9]' (FDCE) to 'u_core/u_csr/mtvec_reg[30]'
+INFO: [Synth 8-3886] merging instance 'u_uart/clk_div_reg[9]' (FDPE) to 'u_timer/compare_reg[30]'
+INFO: [Synth 8-3886] merging instance 'u_timer/compare_reg[9]' (FDPE) to 'u_timer/compare_reg[30]'
+INFO: [Synth 8-3886] merging instance 'u_timer/prescaler_reg[9]' (FDCE) to 'u_gpio/irq_en_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_core/u_csr/mstatus_reg[10]' (FDCE) to 'u_core/u_csr/mtvec_reg[30]'
+INFO: [Synth 8-3886] merging instance 'u_core/u_csr/mtval_reg[10]' (FDCE) to 'u_core/u_csr/mtval_reg[11]'
+INFO: [Synth 8-3886] merging instance 'u_core/u_csr/mtvec_reg[10]' (FDCE) to 'u_core/u_csr/mtvec_reg[30]'
+INFO: [Synth 8-3886] merging instance 'u_core/u_csr/mie_reg[10]' (FDCE) to 'u_core/u_csr/mtvec_reg[30]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\u_timer/compare_reg[30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_core/u_csr/\mstatus_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_core/u_csr/\mie_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_gpio/dir_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_core/u_regfile/\regs_reg[1][30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_uart/tx_shift_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_uart/tx_shift_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_uart/tx_shift_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_uart/tx_shift_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_uart/tx_shift_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_uart/tx_shift_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_uart/tx_shift_reg[0] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:10:01 ; elapsed = 00:10:14 . Memory (MB): peak = 4845.324 ; gain = 3111.789 ; free physical = 189 ; free virtual = 7591
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:10:15 ; elapsed = 00:10:45 . Memory (MB): peak = 4845.324 ; gain = 3111.789 ; free physical = 277 ; free virtual = 7476
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:10:17 ; elapsed = 00:10:47 . Memory (MB): peak = 4845.324 ; gain = 3111.789 ; free physical = 275 ; free virtual = 7475
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:10:17 ; elapsed = 00:10:47 . Memory (MB): peak = 4845.324 ; gain = 3111.789 ; free physical = 260 ; free virtual = 7470
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:10:22 ; elapsed = 00:10:52 . Memory (MB): peak = 4845.324 ; gain = 3111.789 ; free physical = 262 ; free virtual = 7479
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:10:22 ; elapsed = 00:10:52 . Memory (MB): peak = 4845.324 ; gain = 3111.789 ; free physical = 262 ; free virtual = 7479
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:10:22 ; elapsed = 00:10:52 . Memory (MB): peak = 4845.324 ; gain = 3111.789 ; free physical = 262 ; free virtual = 7479
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:10:22 ; elapsed = 00:10:52 . Memory (MB): peak = 4845.324 ; gain = 3111.789 ; free physical = 262 ; free virtual = 7479
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:10:22 ; elapsed = 00:10:52 . Memory (MB): peak = 4845.324 ; gain = 3111.789 ; free physical = 262 ; free virtual = 7479
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:10:22 ; elapsed = 00:10:52 . Memory (MB): peak = 4845.324 ; gain = 3111.789 ; free physical = 262 ; free virtual = 7479
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |     4|
+|3     |LUT1   |    16|
+|4     |LUT2   |    17|
+|5     |LUT3   |     2|
+|6     |LUT4   |     5|
+|7     |LUT6   |     5|
+|8     |FDCE   |    21|
+|9     |FDPE   |     1|
+|10    |IBUF   |     2|
+|11    |OBUF   |    33|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:10:22 ; elapsed = 00:10:53 . Memory (MB): peak = 4845.324 ; gain = 3111.789 ; free physical = 262 ; free virtual = 7479
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 33 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:09:45 ; elapsed = 00:10:38 . Memory (MB): peak = 4845.324 ; gain = 2855.051 ; free physical = 5656 ; free virtual = 12154
+Synthesis Optimization Complete : Time (s): cpu = 00:10:25 ; elapsed = 00:11:12 . Memory (MB): peak = 4845.324 ; gain = 3111.789 ; free physical = 5676 ; free virtual = 12153
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4845.324 ; gain = 0.000 ; free physical = 5669 ; free virtual = 12147
+INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/synthesis_logs/clock.xdc]
+Finished Parsing XDC File [/home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/synthesis_logs/clock.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4865.824 ; gain = 0.000 ; free physical = 5670 ; free virtual = 12149
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: d8909ede
+INFO: [Common 17-83] Releasing license: Synthesis
+172 Infos, 94 Warnings, 1 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:10:33 ; elapsed = 00:11:54 . Memory (MB): peak = 4865.859 ; gain = 3253.465 ; free physical = 5668 ; free virtual = 12148
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 7894.431; main = 3816.653; forked = 5090.951
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 15102.547; main = 4865.828; forked = 10261.141
+# report_utilization -file /home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/synthesis_logs/utilization_brv32_mcu.rpt
+# report_timing_summary -file /home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/synthesis_logs/timing_brv32_mcu.rpt
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+report_timing_summary: Time (s): cpu = 00:00:06 ; elapsed = 00:00:15 . Memory (MB): peak = 4865.859 ; gain = 0.000 ; free physical = 5531 ; free virtual = 12054
+INFO: [Common 17-206] Exiting Vivado at Thu Mar 19 16:40:19 2026...

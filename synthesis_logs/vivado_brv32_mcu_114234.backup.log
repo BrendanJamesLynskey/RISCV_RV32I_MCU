@@ -1,0 +1,42 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Thu Mar 19 16:05:12 2026
+# Process ID         : 114234
+# Current directory  : /home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/synthesis_logs
+# Command line       : vivado -mode batch -source synth_brv32_mcu.tcl -log vivado_brv32_mcu.log -journal vivado_brv32_mcu.jou
+# Log file           : /home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/synthesis_logs/vivado_brv32_mcu.log
+# Journal file       : /home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/synthesis_logs/vivado_brv32_mcu.jou
+# Running On         : bren-ubuntu24-04
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.4 LTS
+# Processor Detail   : Intel(R) Core(TM) i7-3770 CPU @ 3.40GHz
+# CPU Frequency      : 2857.593 MHz
+# CPU Physical cores : 4
+# CPU Logical cores  : 8
+# Host memory        : 16630 MB
+# Swap memory        : 4294 MB
+# Total Virtual      : 20925 MB
+# Available Virtual  : 11948 MB
+#-----------------------------------------------------------
+source synth_brv32_mcu.tcl
+# create_project -in_memory -part xc7a35tcpg236-1
+create_project: Time (s): cpu = 00:00:17 ; elapsed = 00:00:05 . Memory (MB): peak = 1661.234 ; gain = 97.715 ; free physical = 2190 ; free virtual = 10978
+# read_verilog [list \
+#     /home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/brv32_mcu.v \
+#     /home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/brv32_core.v \
+#     /home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/alu.v \
+#     /home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/regfile.v \
+#     /home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/decoder.v \
+#     /home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/imem.v \
+#     /home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/dmem.v \
+#     /home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/csr.v \
+#     /home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/gpio.v \
+#     /home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/uart.v \
+#     /home/brendan/synthesis_workspace/RISCV_RV32I_SingleCycle/rtl/timer.v \
+# ]
+# set_property top brv32_mcu [current_fileset]
+ERROR: [Common 17-53] User Exception: No open design. Please open an elaborated, synthesized or implemented design before executing this command.
+INFO: [Common 17-206] Exiting Vivado at Thu Mar 19 16:05:20 2026...
